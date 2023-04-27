@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./favicon.ico.png" type="image/x-icon">
+
+        <title>Ramal.Org</title>
+        <link rel="stylesheet" type="text/css" href="./P.css">
+        <a link href="./P2.html"></a>
+        
+
+    </head>
+    <body>
+
+    
+<header>
+  
+  <!--Logotipo-->
+           
+  <nav>
+              <a href="./P.html"><img src="./AOS RAMAIS.png"></a>
+           
+   </nav>
+
+<!--Hiperlinks para as outras tabelas, recarregadas na mesma Pagina-->
+      
+<nav class="estilo">
+        <ul>
+
+         <li> <a href="./P2.html" >Suporte Técnico</a></li>
+         <li> <a href="./P3.html" >Comercial/Financeiro</a></li>
+         <li> <a href="./P4.html" >Agendamento/Estoque</a></li>
+         <li>  <a href="./P.html" >Geral/Lojas</a></li>
+       
+        </ul>
+</nav>
+   
+<br>
+<!--Input da Pesquisa-->
+    
+<input type="text" id="pesquisar" placeholder="Pesquisar...">
+
+    <br>
+
+    <!--Listas com o Conteúdo-->
+     
+    <table class="pesquisa">
+    
+            <tr>
+              <th>Ramal</th>
+              <th>Setor</th>
+              <th>Nome</th>
+            </tr>
+            <tr>
+              <!--Input para usar o Microsip como Ferramenta de Ligação-->
+              
+              <td><a class="link"  href="callto:2200">2200</a></td>
+              <td>Recepção Central</td>
+              <td>Recepção</td>
+          
+            </tr>
+            <tr>
+              <td><a class="link" href="callto:2210">2210</a></td>
+              <td>Bancada Assistência</td>
+              <td>Assistência Técnica</td>
+            </tr>
+            <tr>
+                <td><a class="link" href="callto:2217">2217</a></td>
+                <td>Manutenção</td>
+                <td>Manutenção</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2221">2221</a></td>
+                <td>Administrativo RH </td>
+                <td>Erica </td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2223">2223</a></td>
+                <td>Caixa</td>
+                <td>Loja Central</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2230">2230</a></td>
+                <td>Loja </td>
+                <td>Barra Velha</td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2225">2225</a></td>
+                <td>NOC</td>
+                <td>NOC</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2233">2233</a></td>
+                <td>Loja </td>
+                <td>Barra do Sul</td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2244">2244</a></td>
+                <td>Fiscal </td>
+                <td>Debora</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2242">2242</a></td>
+                <td>Consultor EXT  </td>
+                <td>Rafael</td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2250">2250</a></td>
+                <td>Yuri</td>
+                <td>Yuri</td>
+            </div>
+            </tr>
+          </table> 
+          
+          <br>
+<!--Código para Consulta em JS-->
+          <script> 
+          
+            const input = document.querySelector('#pesquisar');
+        const linhas = document.querySelectorAll('.pesquisa tbody tr');
+        
+        input.addEventListener('input', () => {
+          const termo = input.value.trim().toLowerCase();
+          linhas.forEach(linha => {
+            const valores = linha.querySelectorAll('td');
+            let correspondencia = false;
+            valores.forEach(valor => {
+              if (valor.textContent.toLowerCase().includes(termo)) {
+                correspondencia = true;
+              }
+            });
+            if (correspondencia) {
+              linha.style.display = '';
+            } else {
+              linha.style.display = 'none';
+            }
+          });
+        });
+        
+        </script>
+   <footer>Powered By Kauã Maciel Mendes </footer>   
+    </body>
+    </html>
+
+
+    

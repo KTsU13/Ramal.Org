@@ -1,0 +1,182 @@
+body {
+  background-color: #feff6f;
+background-image: linear-gradient(62deg, #feff6f 0%, #F7CE68 100%);
+}
+
+
+
+img {
+  text-align: center; height: 924; width: 1640;
+ margin-left: 100px;
+ margin-top: -150px;
+
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+   text-align: center;
+ }
+ 
+ th {
+   background: #003399c5;
+   color: #ffffff;
+   border: 2px solid #000000;
+   padding: 4px;
+   text-align: center;
+ }
+ 
+ td {
+   border: 2px solid #020101;
+   padding: 9px;
+   text-align: center;
+ }
+ 
+ tr:nth-child(even) {
+   background-image: linear-gradient(to bottom, #0033999f, #00339970);
+   text-align: center;
+ }
+ 
+ tr:nth-child(odd) {
+   background-image: linear-gradient(to bottom,#0033999f, #00339970);
+   text-align: center;
+ }
+ 
+ table {
+   border: 2px solid #000000;
+   background-color: #fdf5ce;
+   border-spacing: 0;
+   text-align: center;
+ }
+ 
+ input  {
+       text-align: center;
+       display: block;
+       margin: 0 auto;
+       width: 500px;
+       height: 50px;
+       position: relative;
+       animation: float 3s ease-in-out infinite;
+       background-color:  rgba(5, 109, 245, 0.952);
+       border: 2px solid transparent;
+       text-align: center;
+     }
+     
+     @keyframes float {
+       0% {
+         transform: translatey(0px);
+       }
+       50% {
+         transform: translatey(-10px);
+       }
+       100% {
+         transform: translatey(0px);
+       }
+     }
+     
+ 
+
+
+.pesquisar{ 
+ text-emphasis-color: black;
+
+}
+
+#pesquisar {
+ width: 500px;
+ height: 50px;
+ border: 2px solid black;
+ background-image: linear-gradient(to bottom, #0277ca, #003366);
+ background-repeat: no-repeat;
+ background-position: center;
+ border-radius: 5px;
+ color: rgba(0, 0, 0, 0.432);
+ font-size: 18px;
+ text-align: center;
+}
+
+#pesquisar::placeholder {
+ color: white;
+ opacity: 0.8;
+}
+
+nav a {
+ display: inline-block;
+ margin-right: 20px; /* espaçamento entre os links */
+ font-size: 18px; /* tamanho da fonte dos links */
+ color: #0277ca, #003366;  /* cor do texto dos links */
+ /* remove o sublinhado padrão dos links */
+}
+
+
+.estilo ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+.estilo li {
+ display: block;
+ margin-bottom: 10px;
+}
+
+.estilo a {
+ color: rgb(3, 75, 182);
+ text-decoration: none;
+ font-family: 'Raleway', sans-serif;
+}
+
+.estilo {
+ display: flex;
+ justify-content: center;
+ }
+
+ .estilo ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estilo li {
+  margin-right: 20px;
+}
+
+.estilo a {
+   display: block;
+   margin: 0 auto;
+   width: 200px;
+   height: 50px;
+   position: relative;
+   animation: float 3s ease-in-out infinite;
+   background-color:  #0277ca, #003366;
+   border: 2px solid transparent;
+   text-align: center;
+}
+
+.estilo {margin-top: -200px;}
+
+.estilo :hover
+{
+    font-size: 25px;
+}
+.a {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+footer {
+  background-color:  #0277ca, #003366;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color:: black;
+}
+
+.brand {
+  color: #000000;
+  font-weight: bold;
+}

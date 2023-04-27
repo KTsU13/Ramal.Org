@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./favicon.ico.png" type="image/x-icon">
+        <title>Ramal.Org</title>
+        <link rel="stylesheet" type="text/css" href="./P.css">
+    
+    </head>
+    <body>
+      <script src="./P.js"></script>
+
+        <header>
+            <nav>
+              <a href="./P.html"><img src="./AOS RAMAIS.png"></a>
+
+        
+    
+      </nav>echo "# Ramal.Org" >> README.md 
+      git init 
+      git add README.md 
+      git commit -m "first commit" 
+      git branch -M main 
+      git remote add origin https://github.com/KTsU13/Ramal.Org.git
+       git push -u origem principal
+
+      <nav class="estilo">
+        <ul>
+
+    
+         <li> <a href="./P2.html" >Suporte Técnico</a></li>
+         <li> <a href="./P3.html" >Comercial/Financeiro</a></li>
+         <li> <a href="./P4.html" >Agendamento/Estoque</a></li>
+         <li>  <a href="./P.html" >Lojas</a></li>
+        </ul>
+
+
+    </nav>
+    <br>
+
+    <input type="text" id="pesquisar" placeholder="Pesquisar...">
+
+    <br>
+
+    <!--Listas com o Conteúdo-->
+
+      <table class="pesquisa">
+    
+            <tr>
+              <th>Ramal</th>
+              <th>Setor</th>
+              <th>Nome</th>
+            </tr>
+            <tr>
+              <!--HiperLink para usar o Microsip como Ferramenta de Ligação-->
+
+              <td><a class="link" href="callto:2214">2214</a></td>
+              <td>Financeiro</td>
+              <td>Financeiro</td>
+          
+            </tr>
+            <tr>
+              <td><a class="link" href="callto:2215">2215</a></td>
+              <td>Financeiro</td>
+              <td>Financeiro</td>
+            </tr>
+            <tr>
+                <td><a class="link" href="callto:2237">2237</a></td>
+                <td>Financeiro</td>
+                <td>Jessica</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2238">2238</a></td>
+                <td>Financeiro</td>
+                <td>Francini </td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2245">2245</a></td>
+                <td>Comercial</td>
+                <td>Anderson</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2272">2272</a></td>
+                <td>Comercial </td>
+                <td>Comercial</td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2232">2232</a></td>
+                <td>Vendas Moveis</td>
+                <td>Luiz</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2270">2270</a></td>
+                <td>Cobrança </td>
+                <td>Cobrança</td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2271">2271</a></td>
+                <td>Cobrança </td>
+                <td>Cobrança</td>
+            
+              </tr>
+              <tr>
+                <td>Desatualizado</td>
+                <td>Desatualizado</td>
+                <td>Desatualizado</td>
+              </tr>
+              <tr>
+                <td>Desatualizado</td>
+                <td>Desatualizado</td>
+                <td>Desatualizado</td>
+            </div>
+            </tr>
+          </table> 
+          <br>
+          
+          <!--Código para Consulta em JS-->
+      
+          <script>
+
+            const input = document.querySelector('#pesquisar');
+            const linhas = document.querySelectorAll('.pesquisa tbody tr');
+            
+            input.addEventListener('input', () => {
+              const termo = input.value.trim().toLowerCase();
+              linhas.forEach(linha => {
+                const valores = linha.querySelectorAll('td');
+                let correspondencia = false;
+                valores.forEach(valor => {
+                  if (valor.textContent.toLowerCase().includes(termo)) {
+                    correspondencia = true;
+                  }
+                });
+                if (correspondencia) {
+                  linha.style.display = '';
+                } else {
+                  linha.style.display = 'none';
+                }
+              });
+            });
+            
+            </script>
+
+
+    </body>
+    </html>

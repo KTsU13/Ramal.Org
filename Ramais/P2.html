@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./favicon.ico.png" type="image/x-icon">
+        <title>Ramal.Org</title>
+        <link rel="stylesheet" type="text/css" href="./P.css">
+    
+    </head>
+    <body>
+
+        <header>
+ <nav>
+              <a href="./P.html"><img src="./AOS RAMAIS.png"></a>
+</nav>
+
+      <nav class="estilo">
+        <ul>
+
+         <li> <a href="./P2.html" >Suporte Técnico</a></li>
+         <li> <a href="./P3.html" >Comercial/Financeiro</a></li>
+         <li> <a href="./P4.html" >Agendamento/Estoque</a></li>
+         <li>  <a href="./P.html" >Lojas</a></li>
+       
+        </ul>
+
+      </nav>
+    <br>
+
+    <input type="text" id="pesquisar" placeholder="Pesquisar...">
+
+    <br>
+
+    <!--Listas com o Conteúdo-->
+
+      <table class="pesquisa">
+    
+            <tr>
+              <th>Ramal</th>
+              <th>Setor</th>
+              <th>Nome</th>
+            </tr>
+            <tr>
+
+               <!--HiperLink para usar o Microsip como Ferramenta de Ligação-->
+
+              <td><a class="link" href="callto:2241">2241</a></td>
+              <td>Cordenador</td>
+              <td>Suporte</td>
+          
+            </tr>
+            <tr>
+              <td><a class="link" href="callto:2216">2216</a></td>
+              <td>Cordenador Suporte</td>
+              <td>Welinton</td>
+            </tr>
+            <tr>
+                <td><a class="link" href="callto:2268">2268</a></td>
+                <td>NOC CNPJ</td>
+                <td>Kauã</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2261">2261</a></td>
+                <td>NOC CNPJ</td>
+                <td>Thiago </td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2262">2262</a></td>
+                <td>Suporte Técnico</td>
+                <td>Marco Antonio</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2263">2263</a></td>
+                <td>Suporte Técnico </td>
+                <td>Matheus</td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2264">2264</a></td>
+                <td>Suporte Técnico</td>
+                <td>Lucas</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2265">2265</a></td>
+                <td>Suporte Técnico </td>
+                <td>João</td>
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2267">2267</a></td>
+                <td>Suporte Técnico </td>
+                <td>Luan</td>
+            
+              </tr>
+              <tr>
+                <td><a class="link" href="callto:2269">2269</a></td>
+                <td>Suporte Técnico </td>
+                <td>Jairo</td>
+              </tr>
+             
+              <tr>
+
+                <td>Desatualizado</td>
+                <td>Desatualizado</td>
+                <td>Desatualizado</td>
+      
+            </tr>
+
+          </table> 
+          
+          <br>
+
+          <!--Código para Consulta em JS-->
+          
+        <script>
+
+          const input = document.querySelector('#pesquisar');
+          const linhas = document.querySelectorAll('.pesquisa tbody tr');
+          
+          input.addEventListener('input', () => {
+            const termo = input.value.trim().toLowerCase();
+            linhas.forEach(linha => {
+              const valores = linha.querySelectorAll('td');
+              let correspondencia = false;
+              valores.forEach(valor => {
+                if (valor.textContent.toLowerCase().includes(termo)) {
+                  correspondencia = true;
+                }
+              });
+              if (correspondencia) {
+                linha.style.display = '';
+              } else {
+                linha.style.display = 'none';
+              }
+            });
+          });
+          
+          </script>
+      
+    </body>
+    </html>
